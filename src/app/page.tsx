@@ -1,69 +1,234 @@
-import Image from "next/image";
+import Header from "@/components/Header";
+import ServiceCard from "@/components/ServiceCard";
+import WorkCard from "@/components/WorkCard";
+import { agency } from "@/data/agency";
+import { services } from "@/data/services";
+import { work } from "@/data/work";
+import { insights } from "@/data/insights";
 
 export default function Home() {
+  const marqueeItems = services.map((s) => s.title.toUpperCase());
+  const marqueeText = [...marqueeItems, ...marqueeItems].join(" — ");
+
   return (
-    <div className="flex flex-col flex-1 items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex flex-1 w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
-        <Image
-          className="dark:invert h-5 w-[100px]"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
-            To get started, edit the{" "}
-            <code className="rounded bg-black/[.06] px-1.5 py-0.5 font-mono text-[0.9em] dark:bg-white/[.08]">
-              page.tsx
-            </code>{" "}
-            file.
+    <>
+      <Header />
+
+      {/* HERO */}
+      <section className="grid grid-cols-1 gap-10 border-b border-foreground/10 px-6 py-20 sm:grid-cols-[1.4fr_1fr] sm:items-end sm:px-14 sm:py-24 lg:py-28">
+        <div className="animate-fade-up">
+          <div className="mb-6 text-sm font-semibold tracking-[0.12em] text-accent uppercase">
+            Marketing Agency
+          </div>
+          <h1 className="font-display text-5xl leading-[0.98] font-extrabold tracking-tight uppercase sm:text-6xl lg:text-[96px]">
+            {agency.tagline}
           </h1>
-          <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Learning
-            </a>{" "}
-            center.
+        </div>
+        <div className="animate-fade-up pb-2">
+          <p className="mb-8 text-lg leading-relaxed text-foreground/70">
+            {agency.bio}
+          </p>
+          <a
+            href={agency.bookingUrl}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center gap-2.5 border-b-2 border-foreground pb-1.5 text-base font-semibold uppercase hover:border-accent hover:text-accent"
+          >
+            Book a strategy call &rarr;
+          </a>
+        </div>
+      </section>
+
+      {/* MARQUEE */}
+      <div className="overflow-hidden bg-foreground py-4.5 text-background">
+        <div className="animate-marquee flex w-max whitespace-nowrap">
+          <span className="font-display pr-4 text-sm font-medium tracking-[0.04em]">
+            {marqueeText} &mdash;
+          </span>
+          <span className="font-display pr-4 text-sm font-medium tracking-[0.04em]">
+            {marqueeText} &mdash;
+          </span>
+        </div>
+      </div>
+
+      {/* SERVICES */}
+      <section
+        id="services"
+        className="border-b border-foreground/10 px-6 py-24 sm:px-14 sm:py-28"
+      >
+        <div className="mb-14 grid grid-cols-1 gap-6 sm:grid-cols-[1fr_2fr] sm:gap-10">
+          <div className="text-sm font-semibold tracking-[0.12em] text-accent uppercase">
+            What We Do
+          </div>
+          <h2 className="font-display max-w-xl text-4xl font-bold tracking-tight uppercase sm:text-[52px]">
+            {services.length} disciplines. One relentless focus on growth.
+          </h2>
+        </div>
+        <div className="flex flex-col">
+          {services.map((service, i) => (
+            <ServiceCard key={service.slug} service={service} index={i} />
+          ))}
+        </div>
+      </section>
+
+      {/* WORK */}
+      <section
+        id="work"
+        className="border-b border-foreground/10 px-6 py-24 sm:px-14 sm:py-28"
+      >
+        <div className="mb-14 grid grid-cols-1 gap-6 sm:grid-cols-[1fr_2fr] sm:gap-10">
+          <div className="text-sm font-semibold tracking-[0.12em] text-accent uppercase">
+            Selected Work
+          </div>
+          <h2 className="font-display max-w-xl text-4xl font-bold tracking-tight uppercase sm:text-[52px]">
+            Results our clients brag about.
+          </h2>
+        </div>
+        <div className="grid grid-cols-1 gap-x-8 gap-y-12 sm:grid-cols-2 lg:grid-cols-3">
+          {work.map((item) => (
+            <WorkCard key={item.slug} item={item} />
+          ))}
+        </div>
+      </section>
+
+      {/* ABOUT */}
+      <section
+        id="about"
+        className="grid grid-cols-1 gap-12 border-b border-foreground/10 px-6 py-24 sm:grid-cols-2 sm:gap-16 sm:px-14 sm:py-28"
+      >
+        <div>
+          <div className="mb-6 text-sm font-semibold tracking-[0.12em] text-accent uppercase">
+            About Us
+          </div>
+          <h2 className="font-display mb-7 text-4xl font-bold tracking-tight uppercase sm:text-5xl">
+            Small team. Sharp instincts. No fluff.
+          </h2>
+          <p className="mb-5 text-lg leading-relaxed text-foreground/70">
+            {agency.bio}
+          </p>
+          <p className="text-lg leading-relaxed text-foreground/70">
+            Every engagement starts with the same question: what actually
+            moves the number you care about? Everything else is noise.
           </p>
         </div>
-        <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
+        <div className="grid grid-cols-2 gap-6">
+          {agency.stats.map((stat) => (
+            <div
+              key={stat.label}
+              className="border-t border-foreground/15 py-8"
+            >
+              <div className="font-heading text-4xl font-bold sm:text-[44px]">
+                {stat.value}
+              </div>
+              <div className="mt-1.5 text-sm text-foreground/70">
+                {stat.label}
+              </div>
+            </div>
+          ))}
+        </div>
+      </section>
+
+      {/* INSIGHTS */}
+      <section
+        id="insights"
+        className="border-b border-foreground/10 px-6 py-24 sm:px-14 sm:py-28"
+      >
+        <div className="mb-14 grid grid-cols-1 gap-6 sm:grid-cols-[1fr_2fr] sm:gap-10">
+          <div className="text-sm font-semibold tracking-[0.12em] text-accent uppercase">
+            Insights
+          </div>
+          <h2 className="font-display max-w-xl text-4xl font-bold tracking-tight uppercase sm:text-[52px]">
+            Thinking, out loud.
+          </h2>
+        </div>
+        <div className="grid grid-cols-1 gap-10 sm:grid-cols-3 sm:gap-8">
+          {insights.map((post) => (
+            <div
+              key={post.slug}
+              className="border-t border-foreground/15 pt-7"
+            >
+              <div className="mb-3 text-xs font-semibold text-accent">
+                {post.category}
+              </div>
+              <h3 className="font-heading mb-2.5 text-xl leading-tight font-semibold">
+                {post.title}
+              </h3>
+              <p className="text-sm text-foreground/70">{post.summary}</p>
+            </div>
+          ))}
+        </div>
+      </section>
+
+      {/* CONTACT */}
+      <section
+        id="contact"
+        className="bg-foreground px-6 py-28 text-center text-background sm:px-14 sm:py-36"
+      >
+        <div className="mb-7 text-sm font-semibold tracking-[0.12em] text-accent uppercase">
+          Let&apos;s Talk
+        </div>
+        <h2 className="font-display mx-auto mb-10 max-w-3xl text-5xl leading-[1.05] font-bold tracking-tight uppercase sm:text-6xl lg:text-[68px]">
+          Ready to make some noise?
+        </h2>
+        <div className="flex flex-col items-center gap-4 sm:flex-row sm:justify-center">
           <a
-            className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
+            href={agency.bookingUrl}
             target="_blank"
             rel="noopener noreferrer"
+            className="bg-accent inline-flex items-center gap-2.5 rounded-sm px-9 py-4.5 text-lg font-semibold uppercase text-foreground hover:opacity-90"
           >
-            <Image
-              className="dark:invert h-[14px] w-4"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={14}
-            />
-            Deploy Now
+            Book a free strategy call &rarr;
           </a>
           <a
-            className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
+            href={`mailto:${agency.email}`}
+            className="text-background/70 text-sm hover:text-background hover:underline"
           >
-            Documentation
+            {agency.email}
           </a>
         </div>
-      </main>
-    </div>
+      </section>
+
+      {/* FOOTER */}
+      <footer className="grid grid-cols-2 gap-8 px-6 py-14 text-sm text-foreground/70 sm:grid-cols-4 sm:px-14">
+        <div className="font-heading text-xl font-bold text-foreground">
+          {agency.name}
+        </div>
+        <div className="flex flex-col gap-2.5">
+          <a href="#services" className="hover:text-accent">
+            Services
+          </a>
+          <a href="#work" className="hover:text-accent">
+            Work
+          </a>
+          <a href="#about" className="hover:text-accent">
+            About
+          </a>
+        </div>
+        <div className="flex flex-col gap-2.5">
+          <a href="#insights" className="hover:text-accent">
+            Insights
+          </a>
+          <a href="#contact" className="hover:text-accent">
+            Contact
+          </a>
+        </div>
+        <div className="flex flex-col gap-2.5 sm:text-right">
+          {agency.socials.map((s) => (
+            <a
+              key={s.label}
+              href={s.href}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="hover:text-accent"
+            >
+              {s.label}
+            </a>
+          ))}
+          <span>
+            &copy; {new Date().getFullYear()} {agency.name}
+          </span>
+        </div>
+      </footer>
+    </>
   );
 }
