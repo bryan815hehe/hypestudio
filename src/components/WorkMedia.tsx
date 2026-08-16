@@ -21,7 +21,7 @@ export default function WorkMedia({
         loop
         playsInline
         preload="metadata"
-        className={`h-full w-full object-cover ${className}`}
+        className={`absolute inset-0 h-full w-full object-cover ${className}`}
       />
     );
   }
@@ -39,7 +39,7 @@ export default function WorkMedia({
   }
 
   return (
-    <div className="flex h-full w-full items-center justify-center bg-foreground px-4 text-center font-heading text-sm text-background/35">
+    <div className="absolute inset-0 flex items-center justify-center bg-foreground px-4 text-center font-heading text-sm text-background/35">
       {alt}
     </div>
   );

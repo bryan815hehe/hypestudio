@@ -11,6 +11,26 @@ export type WorkItem = {
   video?: string;
   /** Extra images/videos shown on the project's detail page. */
   gallery?: { image?: string; video?: string }[];
+  /** Up to three video clips shown side by side on the project's detail page. */
+  videos?: string[];
+  /** A second row of up to three video clips, shown after the approach section. */
+  videos2?: string[];
+  /** Pill label shown above the brief headline, e.g. "Meet Space Organizers". */
+  briefLabel?: string;
+  /** Large headline stating the project's goal, shown in the brief section. */
+  brief?: string;
+  /** Supporting paragraph shown next to the brief headline. */
+  briefDetail?: string;
+  /** Headline for the "how we work / how we help" approach section. */
+  approachHeadline?: string;
+  /** Left paragraph — the challenge or context. */
+  approachChallenge?: string;
+  /** Right paragraph — how Hype Studio helped. */
+  approachSolution?: string;
+  /** Pill label above the approach pillars, e.g. "Brand Personality". */
+  pillarsLabel?: string;
+  /** Three short pillars describing the approach. */
+  pillars?: { title: string; description: string }[];
 };
 
 export const work: WorkItem[] = [
@@ -62,6 +82,44 @@ export const work: WorkItem[] = [
     year: "2024",
     image: "/work/space-organizers-poster.jpg",
     video: "/work/space-organizers.mp4",
+    videos: [
+      "/work/space-organizers.mp4",
+      "/work/space-organizers-2.mp4",
+      "/work/space-organizers-3.mp4",
+    ],
+    briefLabel: "Meet Space Organizers",
+    brief:
+      "To present Space Organizers as the go-to professional organizing service, turning everyday clutter into calm, camera-ready transformations.",
+    briefDetail:
+      "We're all about showing the before and after that actually sells the service. Every post is built to make a stranger scrolling past stop, watch, and think — I need this.",
+    approachHeadline: "Turning cluttered rooms into scroll-stopping content",
+    approachChallenge:
+      "Professional organizing is a service people don't know they need until they see it. The work happens behind closed doors, in someone else's mess, and the results are easy to describe but hard to make people actually feel — especially in a three-second scroll.",
+    approachSolution:
+      "That's where we come in. We built a content system around the transformation itself — full before-and-afters, satisfying time-lapses, and the small human moments in between. Every post is shot to make the result impossible to scroll past, and easy to imagine in your own home.",
+    pillarsLabel: "Brand Personality",
+    pillars: [
+      {
+        title: "Calm",
+        description:
+          "The brand feels like an exhale — steady and reassuring, never chaotic, even when the mess in frame is.",
+      },
+      {
+        title: "Practical",
+        description:
+          "No fluff, no gimmicks — just clear, useful methods that make the transformation feel achievable.",
+      },
+      {
+        title: "Trustworthy",
+        description:
+          "Real homes and honest results, so the brand reads as dependable, not staged or salesy.",
+      },
+    ],
+    videos2: [
+      "/work/space-organizers-4.mp4",
+      "/work/space-organizers-5.mp4",
+      "/work/space-organizers-6.mp4",
+    ],
   },
   {
     slug: "osteotherapy-client",
