@@ -9,6 +9,8 @@ export type WorkItem = {
   image?: string;
   /** Muted, looping clip shown instead of `image` when present. */
   video?: string;
+  /** Extra images/videos shown on the project's detail page. */
+  gallery?: { image?: string; video?: string }[];
 };
 
 export const work: WorkItem[] = [
@@ -52,38 +54,6 @@ export const work: WorkItem[] = [
     video: "/work/insurance-client.mp4",
   },
   {
-    slug: "curtain-client",
-    client: "Curtain Client",
-    summary:
-      "Product and lifestyle content for a curtain and home furnishing business, built to showcase craftsmanship and drive local leads.",
-    tags: ["Home & Living", "Content Creation"],
-    year: "2024",
-  },
-  {
-    slug: "interior-design-client",
-    client: "Interior Design Client",
-    summary:
-      "Portfolio-driven content and social media management for an interior design studio, positioning past projects as the sales pitch.",
-    tags: ["Interior Design", "Social Media"],
-    year: "2024",
-  },
-  {
-    slug: "public-speaker-client",
-    client: "Public Speaker",
-    summary:
-      "Personal brand content and storytelling for a public speaker, turning stage moments into shareable social content.",
-    tags: ["Personal Brand", "Content Creation"],
-    year: "2024",
-  },
-  {
-    slug: "corporate-client",
-    client: "Corporate Client",
-    summary:
-      "Brand messaging and content support for a corporate client, aligning internal and external communications under one narrative.",
-    tags: ["Corporate", "Brand Strategy"],
-    year: "2024",
-  },
-  {
     slug: "space-organizers",
     client: "Space Organizers",
     summary:
@@ -94,14 +64,6 @@ export const work: WorkItem[] = [
     video: "/work/space-organizers.mp4",
   },
   {
-    slug: "universiti-malaya",
-    client: "Universiti Malaya",
-    summary:
-      "Content support for a university initiative, communicating programs and stories to a student and public audience.",
-    tags: ["Education", "Content Creation"],
-    year: "2024",
-  },
-  {
     slug: "osteotherapy-client",
     client: "Osteotherapy Client",
     summary:
@@ -110,13 +72,5 @@ export const work: WorkItem[] = [
     year: "2024",
     image: "/work/osteotherapy-client-poster.jpg",
     video: "/work/osteotherapy-client.mp4",
-  },
-  {
-    slug: "coworking-space",
-    client: "Coworking Space",
-    summary:
-      "Social media and community content for a coworking space, spotlighting members and events to drive membership sign-ups.",
-    tags: ["Coworking", "Social Media"],
-    year: "2024",
   },
 ];

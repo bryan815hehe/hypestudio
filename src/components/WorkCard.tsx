@@ -1,14 +1,10 @@
 import Image from "next/image";
+import Link from "next/link";
 import type { WorkItem } from "@/data/work";
 
 export default function WorkCard({ item }: { item: WorkItem }) {
-  const Wrapper = item.link ? "a" : "div";
-  const wrapperProps = item.link
-    ? { href: item.link, target: "_blank", rel: "noopener noreferrer" }
-    : {};
-
   return (
-    <Wrapper {...wrapperProps} className="group block">
+    <Link href={`/work/${item.slug}`} className="group block">
       <div className="relative mb-5 aspect-4/5 w-full overflow-hidden bg-foreground">
         {item.video ? (
           <video
@@ -54,6 +50,6 @@ export default function WorkCard({ item }: { item: WorkItem }) {
           </span>
         ))}
       </div>
-    </Wrapper>
+    </Link>
   );
 }
