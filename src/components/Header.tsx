@@ -1,14 +1,19 @@
+import Image from "next/image";
 import Link from "next/link";
 import { agency } from "@/data/agency";
 
 export default function Header() {
   return (
     <header className="sticky top-0 z-50 flex items-center justify-between border-b border-foreground/10 bg-background px-6 py-6 sm:px-14">
-      <Link
-        href="/"
-        className="font-heading text-xl font-bold tracking-tight sm:text-[22px]"
-      >
-        {agency.name}
+      <Link href="/">
+        <Image
+          src="/brand/logo.png"
+          alt={agency.name}
+          width={262}
+          height={66}
+          priority
+          className="h-6 w-auto sm:h-[26px]"
+        />
       </Link>
       <nav className="flex items-center gap-5 sm:gap-9">
         <Link
@@ -28,12 +33,6 @@ export default function Header() {
           className="hidden text-sm font-medium sm:inline hover:text-accent"
         >
           About
-        </Link>
-        <Link
-          href="/#insights"
-          className="hidden text-sm font-medium sm:inline hover:text-accent"
-        >
-          Insights
         </Link>
         <a
           href={agency.bookingUrl}

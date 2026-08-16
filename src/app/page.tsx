@@ -1,10 +1,10 @@
+import Image from "next/image";
 import Header from "@/components/Header";
 import ServiceCard from "@/components/ServiceCard";
 import WorkCard from "@/components/WorkCard";
 import { agency } from "@/data/agency";
 import { services } from "@/data/services";
 import { work } from "@/data/work";
-import { insights } from "@/data/insights";
 
 export default function Home() {
   const marqueeItems = services.map((s) => s.title.toUpperCase());
@@ -128,37 +128,6 @@ export default function Home() {
         </div>
       </section>
 
-      {/* INSIGHTS */}
-      <section
-        id="insights"
-        className="border-b border-foreground/10 px-6 py-24 sm:px-14 sm:py-28"
-      >
-        <div className="mb-14 grid grid-cols-1 gap-6 sm:grid-cols-[1fr_2fr] sm:gap-10">
-          <div className="text-sm font-semibold tracking-[0.12em] text-accent uppercase">
-            Insights
-          </div>
-          <h2 className="font-display max-w-xl text-4xl font-bold tracking-tight uppercase sm:text-[52px]">
-            Thinking, out loud.
-          </h2>
-        </div>
-        <div className="grid grid-cols-1 gap-10 sm:grid-cols-3 sm:gap-8">
-          {insights.map((post) => (
-            <div
-              key={post.slug}
-              className="border-t border-foreground/15 pt-7"
-            >
-              <div className="mb-3 text-xs font-semibold text-accent">
-                {post.category}
-              </div>
-              <h3 className="font-heading mb-2.5 text-xl leading-tight font-semibold">
-                {post.title}
-              </h3>
-              <p className="text-sm text-foreground/70">{post.summary}</p>
-            </div>
-          ))}
-        </div>
-      </section>
-
       {/* CONTACT */}
       <section
         id="contact"
@@ -189,10 +158,14 @@ export default function Home() {
       </section>
 
       {/* FOOTER */}
-      <footer className="grid grid-cols-2 gap-8 px-6 py-14 text-sm text-foreground/70 sm:grid-cols-4 sm:px-14">
-        <div className="font-heading text-xl font-bold text-foreground">
-          {agency.name}
-        </div>
+      <footer className="grid grid-cols-2 gap-8 px-6 py-14 text-sm text-foreground/70 sm:grid-cols-3 sm:px-14">
+        <Image
+          src="/brand/logo.png"
+          alt={agency.name}
+          width={262}
+          height={66}
+          className="h-6 w-auto"
+        />
         <div className="flex flex-col gap-2.5">
           <a href="#services" className="hover:text-accent">
             Services
@@ -202,11 +175,6 @@ export default function Home() {
           </a>
           <a href="#about" className="hover:text-accent">
             About
-          </a>
-        </div>
-        <div className="flex flex-col gap-2.5">
-          <a href="#insights" className="hover:text-accent">
-            Insights
           </a>
           <a href="#contact" className="hover:text-accent">
             Contact
