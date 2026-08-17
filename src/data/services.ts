@@ -27,11 +27,4 @@ export const services: Service[] = [
       "Always-on content and community management across the platforms your audience actually uses.",
     deliverables: ["Content calendars", "Community management", "Platform strategy"],
   },
-  {
-    slug: "email-marketing",
-    title: "Email Marketing",
-    description:
-      "Email writing that keeps your audience connected between campaigns.",
-    deliverables: ["Newsletter writing", "Nurture sequences", "Copy & subject line testing"],
-  },
 ];

@@ -42,6 +42,34 @@ export const work: WorkItem[] = [
     tags: ["F&B", "Content Creation"],
     year: "2025",
     image: "/work/pinyouting-cny-bento.jpg",
+    briefLabel: "Meet Pinyouting",
+    brief:
+      "To turn Pinyouting's CNY bento boxes into the festive gift Malaysians can't stop sharing on Xiaohongshu.",
+    briefDetail:
+      "We're all about making food content people bookmark first and ask questions later. Every post is built to make CNY shopping feel a little more exciting.",
+    approachHeadline: "Making a seasonal product impossible to scroll past",
+    approachChallenge:
+      "CNY bento boxes are a crowded, seasonal category — dozens of brands post the same red-and-gold spread every year, and shoppers tune it out fast. Pinyouting needed content that stood out in the two-week window that actually matters.",
+    approachSolution:
+      "We leaned into food styling and pacing built for Xiaohongshu's scroll speed — tight product shots, satisfying reveals, and captions that do the selling before the photo even loads. Every post was built to turn festive curiosity into an order.",
+    pillarsLabel: "Brand Personality",
+    pillars: [
+      {
+        title: "Festive",
+        description:
+          "Warm, celebratory styling that puts Pinyouting in the mood of the season, not just the calendar.",
+      },
+      {
+        title: "Generous",
+        description:
+          "Every shot emphasizes abundance — the kind of spread that feels right for gifting, not just eating.",
+      },
+      {
+        title: "Crafted",
+        description:
+          "Close, deliberate shots that show the care behind each box, not a mass-produced product.",
+      },
+    ],
   },
   {
     slug: "master-kam-feng-shui",
@@ -52,6 +80,44 @@ export const work: WorkItem[] = [
     result: "Continuous organic traffic + paid leads from RM2/lead",
     year: "2025",
     image: "/work/master-kam-feng-shui.jpg",
+    video: "/work/master-kam-feng-shui.mp4",
+    briefLabel: "Meet Master Kam",
+    brief:
+      "To build Master Kam's presence as the feng shui consultant Malaysians trust first, not just find first.",
+    briefDetail:
+      "We're all about turning expertise into content people actually watch. Every video is built to make a stranger stop scrolling and start listening.",
+    approachHeadline: "Turning traditional expertise into a modern personal brand",
+    approachChallenge:
+      "Feng shui is a trust-first service — people don't book a consultant off a single ad, they need to feel like they know them first. Master Kam had deep expertise but no consistent way to show it on video.",
+    approachSolution:
+      "We built a storytelling system around his voice — short, confident explainers that translate feng shui concepts into everyday language, paired with a consistent visual identity across Facebook and Instagram. The result: content people watch, share, and eventually book from.",
+    pillarsLabel: "Brand Personality",
+    pillars: [
+      {
+        title: "Trustworthy",
+        description:
+          "Grounded, expert delivery that never feels like a sales pitch.",
+      },
+      {
+        title: "Approachable",
+        description:
+          "Traditional concepts explained in plain language, not jargon.",
+      },
+      {
+        title: "Consistent",
+        description:
+          "A recognizable face and voice across every platform and post.",
+      },
+    ],
+    videos: [
+      "/work/master-kam-feng-shui.mp4",
+      "/work/master-kam-feng-shui-2.mp4",
+      "/work/master-kam-feng-shui-3.mp4",
+    ],
+    videos2: [
+      "/work/master-kam-feng-shui-4.mp4",
+      "/work/master-kam-feng-shui-5.mp4",
+    ],
   },
   {
     slug: "maru",
@@ -62,16 +128,79 @@ export const work: WorkItem[] = [
     year: "2024",
     image: "/work/maru-poster.jpg",
     video: "/work/maru.mp4",
+    videos: ["/work/maru.mp4"],
+    briefLabel: "Meet Maru",
+    brief:
+      "To present Maru's pet water fountain as the product every cat and dog owner didn't know they needed.",
+    briefDetail:
+      "We're all about making a small home appliance feel genuinely exciting. Every clip is built around the moment a pet actually uses it — because that's the sell.",
+    approachHeadline: "Selling a product through the pet's reaction, not the spec sheet",
+    approachChallenge:
+      "A pet water fountain is a functional, low-drama product — the features (filtration, quiet motor, capacity) don't sell themselves on a fast-scrolling feed like Instagram Reels.",
+    approachSolution:
+      "We shifted focus from specs to the pet's reaction — playful, artistic short-form video and animation that shows curiosity and delight in the moment of use. The product becomes proof, not pitch.",
+    pillarsLabel: "Brand Personality",
+    pillars: [
+      {
+        title: "Playful",
+        description:
+          "Content built around genuine pet curiosity and delight, not staged demos.",
+      },
+      {
+        title: "Artistic",
+        description:
+          "Considered framing and motion that makes a small appliance feel premium.",
+      },
+      {
+        title: "Trustworthy",
+        description:
+          "Real footage of real use, so the product's benefit is obvious, not claimed.",
+      },
+    ],
   },
   {
     slug: "insurance-client",
-    client: "Insurance Client",
+    client: "Insurance",
     summary:
       "Content and storytelling strategy for an insurance advisor, translating a complex product into content people actually understand.",
     tags: ["Insurance", "Content Creation"],
     year: "2024",
     image: "/work/insurance-client-poster.jpg",
     video: "/work/insurance-client.mp4",
+    videos: [
+      "/work/insurance-client.mp4",
+      "/work/insurance-client-2.mp4",
+      "/work/insurance-client-3.mp4",
+    ],
+    videos2: ["/work/insurance-client-4.mp4", "/work/insurance-client-5.mp4"],
+    briefLabel: "Meet the Client",
+    brief:
+      "To translate a complex insurance product into content people actually understand — and trust.",
+    briefDetail:
+      "We're all about making the confusing feel simple. Every piece of content is built to answer the question a prospect is too embarrassed to ask.",
+    approachHeadline: "Making insurance make sense on a scrolling feed",
+    approachChallenge:
+      "Insurance is a high-consideration, low-trust category — most content in the space is either too technical to follow or too salesy to trust, and either way, people scroll past it.",
+    approachSolution:
+      "We built a storytelling strategy that breaks products down into plain-language scenarios people recognize from their own lives, delivered with a consistent, credible on-camera presence. The goal isn't just clicks — it's the kind of trust that gets someone to actually book a call.",
+    pillarsLabel: "Brand Personality",
+    pillars: [
+      {
+        title: "Clear",
+        description:
+          "Complex products explained without jargon, so nothing gets lost in translation.",
+      },
+      {
+        title: "Credible",
+        description:
+          "A consistent, confident delivery that reads as advice, not a sales pitch.",
+      },
+      {
+        title: "Relatable",
+        description:
+          "Real scenarios people recognize from their own lives, not abstract policy talk.",
+      },
+    ],
   },
   {
     slug: "space-organizers",
@@ -123,12 +252,46 @@ export const work: WorkItem[] = [
   },
   {
     slug: "osteotherapy-client",
-    client: "Osteotherapy Client",
+    client: "Osteotherapy",
     summary:
       "Educational and trust-building content for an osteotherapy practice, explaining treatments in plain language for new patients.",
     tags: ["Healthcare", "Content Creation"],
     year: "2024",
     image: "/work/osteotherapy-client-poster.jpg",
     video: "/work/osteotherapy-client.mp4",
+    videos: [
+      "/work/osteotherapy-client.mp4",
+      "/work/osteotherapy-client-2.mp4",
+      "/work/osteotherapy-client-3.mp4",
+    ],
+    videos2: ["/work/osteotherapy-client-4.mp4"],
+    briefLabel: "Meet the Practice",
+    brief:
+      "To turn osteotherapy from an unfamiliar treatment into a first choice new patients feel confident booking.",
+    briefDetail:
+      "We're all about building trust before the first appointment. Every piece of content is designed to answer the question a nervous new patient is quietly asking.",
+    approachHeadline: "Building trust before a patient ever walks in",
+    approachChallenge:
+      "Most people don't know what osteotherapy is, let alone why it might help them — and health content is easy to distrust if it feels too clinical or too vague.",
+    approachSolution:
+      "We built educational content that explains treatments in plain language, paired with a warm, reassuring on-camera presence that makes the practice feel approachable rather than intimidating. The content does the reassuring, so the first visit feels like a formality, not a leap.",
+    pillarsLabel: "Brand Personality",
+    pillars: [
+      {
+        title: "Reassuring",
+        description:
+          "A calm, confident tone that eases first-visit nerves before they walk in.",
+      },
+      {
+        title: "Educational",
+        description:
+          "Treatments explained in plain language, not clinical jargon.",
+      },
+      {
+        title: "Trustworthy",
+        description:
+          "Consistent, credible delivery that builds confidence over time, not just in one post.",
+      },
+    ],
   },
 ];
