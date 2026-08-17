@@ -216,9 +216,11 @@ export default async function WorkDetailPage({
         <section className="border-b border-foreground/10 px-6 py-14 sm:px-14 sm:py-20">
           <div
             className={
-              item.videos2.length === 2
-                ? "grid grid-cols-1 gap-6 sm:mx-auto sm:max-w-[66%] sm:grid-cols-2"
-                : "grid grid-cols-1 gap-6 sm:grid-cols-3"
+              item.videos2.length === 1
+                ? "grid grid-cols-1 gap-6 sm:mx-auto sm:max-w-[33%]"
+                : item.videos2.length === 2
+                  ? "grid grid-cols-1 gap-6 sm:mx-auto sm:max-w-[66%] sm:grid-cols-2"
+                  : "grid grid-cols-1 gap-6 sm:grid-cols-3"
             }
           >
             {item.videos2.slice(0, 3).map((src, i) => (
