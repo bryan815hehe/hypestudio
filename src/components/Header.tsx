@@ -34,6 +34,12 @@ export default function Header() {
         >
           About
         </Link>
+        <Link
+          href="/pricing"
+          className="hidden text-sm font-medium sm:inline hover:text-accent"
+        >
+          Pricing
+        </Link>
         <a
           href={agency.bookingUrl}
           target="_blank"

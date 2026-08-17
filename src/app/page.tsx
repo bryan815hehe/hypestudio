@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 import Header from "@/components/Header";
 import ServiceCard from "@/components/ServiceCard";
 import WorkCard from "@/components/WorkCard";
@@ -176,6 +177,9 @@ export default function Home() {
           <a href="#about" className="hover:text-accent">
             About
           </a>
+          <Link href="/pricing" className="hover:text-accent">
+            Pricing
+          </Link>
           <a href="#contact" className="hover:text-accent">
             Contact
           </a>
