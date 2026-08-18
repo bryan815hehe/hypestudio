@@ -42,6 +42,15 @@ export const work: WorkItem[] = [
     tags: ["F&B", "Content Creation"],
     year: "2025",
     image: "/work/pinyouting-cny-bento.jpg",
+    gallery: [
+      { image: "/work/pinyouting-cny-bento-1.jpg" },
+      { image: "/work/pinyouting-cny-bento-4.jpg" },
+      { image: "/work/pinyouting-cny-bento-5.jpg" },
+      { image: "/work/pinyouting-cny-bento-6.jpg" },
+      { image: "/work/pinyouting-cny-bento-7.jpg" },
+      { image: "/work/pinyouting-cny-bento-12.jpg" },
+      { image: "/work/pinyouting-cny-bento-14.jpg" },
+    ],
     briefLabel: "Meet Pinyouting",
     brief:
       "To turn Pinyouting's CNY bento boxes into the festive gift Malaysians can't stop sharing on Xiaohongshu.",

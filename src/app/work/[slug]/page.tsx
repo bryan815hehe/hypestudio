@@ -4,6 +4,7 @@ import { notFound } from "next/navigation";
 import Header from "@/components/Header";
 import WorkCard from "@/components/WorkCard";
 import WorkMedia from "@/components/WorkMedia";
+import GallerySlider from "@/components/GallerySlider";
 import { agency } from "@/data/agency";
 import { work } from "@/data/work";
 
@@ -104,30 +105,6 @@ export default async function WorkDetailPage({
         </div>
       </section>
 
-      {/* GALLERY */}
-      {item.gallery && item.gallery.length > 0 && (
-        <section className="border-b border-foreground/10 px-6 py-14 sm:px-14 sm:py-20">
-          <div className="grid grid-cols-1 gap-6 sm:grid-cols-6">
-            {item.gallery.map((media, i) => (
-              <div
-                key={i}
-                className={`relative w-full overflow-hidden bg-foreground ${
-                  i % 3 === 0
-                    ? "aspect-4/5 sm:col-span-4"
-                    : "aspect-square sm:col-span-2"
-                }`}
-              >
-                <WorkMedia
-                  image={media.image}
-                  video={media.video}
-                  alt={`${item.client} ${i + 1}`}
-                />
-              </div>
-            ))}
-          </div>
-        </section>
-      )}
-
       {/* BRIEF */}
       {item.brief && (
         <section className="border-b border-foreground/10 bg-foreground px-6 py-20 text-background sm:px-14 sm:py-28">
@@ -147,6 +124,15 @@ export default async function WorkDetailPage({
                 {item.briefDetail}
               </p>
             )}
+          </div>
+        </section>
+      )}
+
+      {/* GALLERY */}
+      {item.gallery && item.gallery.length > 0 && (
+        <section className="border-b border-foreground/10 py-14 sm:py-20">
+          <div className="px-6 sm:px-14">
+            <GallerySlider items={item.gallery} client={item.client} />
           </div>
         </section>
       )}
