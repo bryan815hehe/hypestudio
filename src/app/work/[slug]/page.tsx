@@ -180,7 +180,15 @@ export default async function WorkDetailPage({
                   {item.pillarsLabel}
                 </span>
               )}
-              <div className="grid grid-cols-1 gap-10 sm:grid-cols-3 sm:gap-12">
+              <div
+                className={
+                  item.pillars.length === 1
+                    ? "grid grid-cols-1 gap-10 sm:max-w-[33%] sm:gap-12"
+                    : item.pillars.length === 2
+                      ? "grid grid-cols-1 gap-10 sm:grid-cols-2 sm:max-w-[66%] sm:gap-12"
+                      : "grid grid-cols-1 gap-10 sm:grid-cols-3 sm:gap-12"
+                }
+              >
                 {item.pillars.map((pillar) => (
                   <div key={pillar.title}>
                     <h3 className="font-display mb-3 text-2xl font-bold tracking-tight uppercase sm:text-3xl">

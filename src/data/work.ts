@@ -260,6 +260,45 @@ export const work: WorkItem[] = [
     ],
   },
   {
+    slug: "mr-solar",
+    client: "Mr. Solar",
+    summary:
+      "Performance ad creatives and video content for a residential solar energy provider, turning a government rebate scheme into leads.",
+    tags: ["Solar Energy", "Performance Ads"],
+    result: "RM53,300 in sales generated at an average cost per lead of RM18",
+    year: "2025",
+    image: "/work/mr-solar-poster.jpg",
+    video: "/work/mr-solar.mp4",
+    gallery: [
+      { video: "/work/mr-solar.mp4" },
+      { image: "/work/mr-solar-1.png" },
+      { image: "/work/mr-solar-2.png" },
+      { image: "/work/mr-solar-3.jpg" },
+      { image: "/work/mr-solar-4.jpg" },
+    ],
+    briefLabel: "Meet Mr. Solar",
+    brief:
+      "To turn a government solar rebate scheme into a reason homeowners actually reach out, not scroll past.",
+    briefDetail:
+      "We're all about making an incentive impossible to ignore. Every ad is built to make a homeowner stop, do the math, and want to claim it before the quota runs out.",
+    approachHeadline: "Turning a rebate scheme into a lead-gen engine",
+    approachChallenge:
+      "Solar is a high-consideration purchase most homeowners keep putting off — and a government rebate program means nothing if people don't know it exists or don't trust it's real before the quota fills up.",
+    approachSolution:
+      "We built a content system around urgency and proof — bold rebate callouts, real numbers, and social proof from other homeowners who already claimed theirs, paired with explainer video that walks through the offer in plain language. The goal was to turn a bureaucratic-sounding scheme into a limited-time offer worth acting on now.",
+    pillarsLabel: "Results",
+    pillars: [
+      {
+        title: "RM53,300",
+        description: "Total sales generated",
+      },
+      {
+        title: "RM18",
+        description: "Average cost per lead",
+      },
+    ],
+  },
+  {
     slug: "osteotherapy-client",
     client: "Osteotherapy",
     summary:
