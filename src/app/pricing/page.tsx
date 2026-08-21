@@ -203,7 +203,7 @@ export default function PricingPage() {
           Let&apos;s Talk
         </div>
         <h2 className="font-display mx-auto mb-10 max-w-3xl text-5xl leading-[1.05] font-bold tracking-tight uppercase sm:text-6xl lg:text-[68px]">
-          Ready to make some noise?
+          Build your trust with us
         </h2>
         <div className="flex flex-col items-center gap-4 sm:flex-row sm:justify-center">
           <a
