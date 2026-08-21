@@ -1,5 +1,4 @@
 import Image from "next/image";
-import Link from "next/link";
 import Header from "@/components/Header";
 import ServiceCard from "@/components/ServiceCard";
 import WorkCard from "@/components/WorkCard";
@@ -177,25 +176,11 @@ export default function Home() {
           <a href="#about" className="hover:text-accent">
             About
           </a>
-          <Link href="/pricing" className="hover:text-accent">
-            Pricing
-          </Link>
           <a href="#contact" className="hover:text-accent">
             Contact
           </a>
         </div>
         <div className="flex flex-col gap-2.5 sm:text-right">
-          {agency.socials.map((s) => (
-            <a
-              key={s.label}
-              href={s.href}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="hover:text-accent"
-            >
-              {s.label}
-            </a>
-          ))}
           <span>
             &copy; {new Date().getFullYear()} {agency.name}
           </span>
