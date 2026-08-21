@@ -6,6 +6,12 @@
   --accent: #c9a24b;
 }
 
+html,
+body {
+  overflow-x: hidden;
+  max-width: 100vw;
+}
+
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
