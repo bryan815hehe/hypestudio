@@ -7,24 +7,24 @@ export type Service = {
 
 export const services: Service[] = [
   {
-    slug: "storytelling",
-    title: "Storytelling & Narrative Strategy",
+    slug: "category-first-positioning-audit",
+    title: "Category-First Positioning Audit",
     description:
-      "Clarifying the story worth telling — so every piece of content has something to say and someone to say it to.",
-    deliverables: ["Brand narrative", "Messaging clarity", "Audience insight"],
+      "We define the exact market category your business will own — and what you must stop saying to own it.",
+    deliverables: ["Category definition", "Exclusion criteria", "Messaging audit"],
   },
   {
-    slug: "content-creation",
-    title: "Content Creation",
+    slug: "content-strategy-on-position",
+    title: "Content Strategy Built on That Position",
     description:
-      "Photo, video, and written content built around your story, not generic templates.",
-    deliverables: ["Short-form video", "Product & lifestyle photography", "Copywriting"],
+      "Every piece of content is subordinated to your category position, not made for its own sake.",
+    deliverables: ["8 videos/month", "Content calendar", "Platform management"],
   },
   {
-    slug: "social-media",
-    title: "Social Media Management",
+    slug: "pipeline-reporting",
+    title: "Pipeline Reporting",
     description:
-      "Always-on content and community management across the platforms your audience actually uses.",
-    deliverables: ["Content calendars", "Community management", "Platform strategy"],
+      "Every month, we report on consultation bookings and inbound enquiries — not follower counts.",
+    deliverables: ["Consultation bookings", "Inbound enquiry tracking", "Monthly pipeline report"],
   },
 ];
