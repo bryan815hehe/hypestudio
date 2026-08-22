@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 import Header from "@/components/Header";
 import ServiceCard from "@/components/ServiceCard";
 import WorkCard from "@/components/WorkCard";
@@ -6,8 +7,14 @@ import { agency } from "@/data/agency";
 import { services } from "@/data/services";
 import { work } from "@/data/work";
 
+const marqueeItems = [
+  "700% GROWTH",
+  "209% ORGANIC GROWTH",
+  "CATEGORY-FIRST POSITIONING",
+  "CLIENTS IN YOUR PIPELINE",
+];
+
 export default function Home() {
-  const marqueeItems = services.map((s) => s.title.toUpperCase());
   const marqueeText = [...marqueeItems, ...marqueeItems].join(" — ");
 
   return (
@@ -17,16 +24,13 @@ export default function Home() {
       {/* HERO */}
       <section className="grid grid-cols-1 gap-10 border-b border-foreground/10 px-6 py-20 sm:grid-cols-[1.4fr_1fr] sm:items-end sm:px-14 sm:py-24 lg:py-28">
         <div className="animate-fade-up">
-          <div className="mb-6 text-sm font-semibold tracking-[0.12em] text-accent uppercase">
-            Marketing Agency
-          </div>
           <h1 className="font-display text-5xl leading-[0.98] font-extrabold tracking-tight uppercase sm:text-6xl lg:text-[96px]">
             {agency.tagline}
           </h1>
         </div>
         <div className="animate-fade-up pb-2">
           <p className="mb-8 text-lg leading-relaxed text-foreground/70">
-            {agency.bio}
+            {agency.oneLiner}
           </p>
           <a
             href={agency.bookingUrl}
@@ -34,7 +38,7 @@ export default function Home() {
             rel="noopener noreferrer"
             className="inline-flex items-center gap-2.5 border-b-2 border-foreground pb-1.5 text-base font-semibold uppercase hover:border-accent hover:text-accent"
           >
-            Book a strategy call &rarr;
+            Book Your Category-First Audit &rarr;
           </a>
         </div>
       </section>
@@ -51,17 +55,55 @@ export default function Home() {
         </div>
       </div>
 
+      {/* PROBLEM */}
+      <section
+        id="problem"
+        className="border-b border-foreground/10 px-6 py-24 sm:px-14 sm:py-28"
+      >
+        <div className="mb-14">
+          <h2 className="font-display max-w-xl text-4xl font-bold tracking-tight uppercase sm:text-[52px]">
+            The best practitioner in the room is still invisible online.
+          </h2>
+        </div>
+        <div className="grid grid-cols-1 gap-8 sm:grid-cols-3">
+          <div className="border-t border-foreground/15 pt-6">
+            <div className="mb-2 text-sm font-semibold text-accent uppercase">
+              {agency.problem.externalLabel}
+            </div>
+            <p className="text-base leading-relaxed text-foreground/70">
+              {agency.problem.external}
+            </p>
+          </div>
+          <div className="border-t border-foreground/15 pt-6">
+            <div className="mb-2 text-sm font-semibold text-accent uppercase">
+              {agency.problem.internalLabel}
+            </div>
+            <p className="text-base leading-relaxed text-foreground/70">
+              {agency.problem.internal}
+            </p>
+          </div>
+          <div className="border-t border-foreground/15 pt-6">
+            <div className="mb-2 text-sm font-semibold text-accent uppercase">
+              {agency.problem.philosophicalLabel}
+            </div>
+            <p className="text-base leading-relaxed text-foreground/70">
+              {agency.problem.philosophical}
+            </p>
+          </div>
+        </div>
+        <p className="mt-10 max-w-2xl text-base leading-relaxed text-foreground/70">
+          {agency.avoidingFailure}
+        </p>
+      </section>
+
       {/* SERVICES */}
       <section
         id="services"
         className="border-b border-foreground/10 px-6 py-24 sm:px-14 sm:py-28"
       >
-        <div className="mb-14 grid grid-cols-1 gap-6 sm:grid-cols-[1fr_2fr] sm:gap-10">
-          <div className="text-sm font-semibold tracking-[0.12em] text-accent uppercase">
-            What We Do
-          </div>
+        <div className="mb-14">
           <h2 className="font-display max-w-xl text-4xl font-bold tracking-tight uppercase sm:text-[52px]">
-            {services.length} disciplines. One relentless focus on growth.
+            {agency.position}
           </h2>
         </div>
         <div className="flex flex-col">
@@ -76,13 +118,13 @@ export default function Home() {
         id="work"
         className="border-b border-foreground/10 px-6 py-24 sm:px-14 sm:py-28"
       >
-        <div className="mb-14 grid grid-cols-1 gap-6 sm:grid-cols-[1fr_2fr] sm:gap-10">
-          <div className="text-sm font-semibold tracking-[0.12em] text-accent uppercase">
-            Selected Work
-          </div>
+        <div className="mb-14">
           <h2 className="font-display max-w-xl text-4xl font-bold tracking-tight uppercase sm:text-[52px]">
-            Results our clients brag about.
+            Documented results in categories no one else owns.
           </h2>
+          <p className="mt-4 max-w-2xl text-base leading-relaxed text-foreground/70">
+            {agency.transformation}
+          </p>
         </div>
         <div className="grid grid-cols-1 gap-x-8 gap-y-12 sm:grid-cols-2 lg:grid-cols-3">
           {work.map((item) => (
@@ -97,18 +139,17 @@ export default function Home() {
         className="grid grid-cols-1 gap-12 border-b border-foreground/10 px-6 py-24 sm:grid-cols-2 sm:gap-16 sm:px-14 sm:py-28"
       >
         <div>
-          <div className="mb-6 text-sm font-semibold tracking-[0.12em] text-accent uppercase">
-            About Us
-          </div>
           <h2 className="font-display mb-7 text-4xl font-bold tracking-tight uppercase sm:text-5xl">
-            Small team. Sharp instincts. No fluff.
+            Malaysia&apos;s category-first agency.
           </h2>
           <p className="mb-5 text-lg leading-relaxed text-foreground/70">
-            {agency.bio}
+            {agency.guideEmpathy}
+          </p>
+          <p className="mb-5 text-lg leading-relaxed text-foreground/70">
+            {agency.guideAuthority}
           </p>
           <p className="text-lg leading-relaxed text-foreground/70">
-            Every engagement starts with the same question: what actually
-            moves the number you care about? Everything else is noise.
+            {agency.success}
           </p>
         </div>
         <div className="grid grid-cols-2 gap-6">
@@ -136,9 +177,12 @@ export default function Home() {
         <div className="mb-7 text-sm font-semibold tracking-[0.12em] text-accent uppercase">
           Let&apos;s Talk
         </div>
-        <h2 className="font-display mx-auto mb-10 max-w-3xl text-5xl leading-[1.05] font-bold tracking-tight uppercase sm:text-6xl lg:text-[68px]">
-          Build your trust with us
+        <h2 className="font-display mx-auto mb-6 max-w-3xl text-5xl leading-[1.05] font-bold tracking-tight uppercase sm:text-6xl lg:text-[68px]">
+          Own your category. Fill your pipeline.
         </h2>
+        <p className="text-background/70 mx-auto mb-10 max-w-xl text-base leading-relaxed">
+          {agency.ctaDirectDetail}
+        </p>
         <div className="flex flex-col items-center gap-4 sm:flex-row sm:justify-center">
           <a
             href={agency.bookingUrl}
@@ -146,7 +190,7 @@ export default function Home() {
             rel="noopener noreferrer"
             className="bg-accent inline-flex items-center gap-2.5 rounded-sm px-9 py-4.5 text-lg font-semibold uppercase text-foreground hover:opacity-90"
           >
-            Book a free strategy call &rarr;
+            {agency.ctaDirect} &rarr;
           </a>
           <a
             href={`mailto:${agency.email}`}
@@ -155,6 +199,12 @@ export default function Home() {
             {agency.email}
           </a>
         </div>
+        <Link
+          href="/work/master-kam-feng-shui"
+          className="text-background/70 mt-8 inline-block text-sm hover:text-background hover:underline"
+        >
+          {agency.ctaTransitional} &rarr;
+        </Link>
       </section>
 
       {/* FOOTER */}

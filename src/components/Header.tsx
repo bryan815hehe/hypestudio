@@ -40,7 +40,7 @@ export default function Header() {
           rel="noopener noreferrer"
           className="rounded-sm bg-foreground px-4 py-2.5 text-sm font-semibold text-background hover:bg-accent hover:text-foreground sm:px-[22px]"
         >
-          Book a Call
+          Book Your Audit
         </a>
       </nav>
     </header>
