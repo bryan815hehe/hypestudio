@@ -84,7 +84,7 @@ export const work: WorkItem[] = [
     summary:
       "Personal brand video content and storytelling strategy to help a feng shui consultant build trust and reach across Facebook and Instagram.",
     tags: ["Personal Brand", "Video"],
-    result: "209% organic growth in 12 months",
+    result: "Continuous organic traffic + paid leads from RM2/lead",
     year: "2025",
     image: "/work/master-kam-feng-shui.jpg",
     video: "/work/master-kam-feng-shui.mp4",
